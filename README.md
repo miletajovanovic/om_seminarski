@@ -1,1 +1,1 @@
-# om_seminarski
+Zadatak kap kise 5.6.1.

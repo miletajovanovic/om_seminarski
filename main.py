@@ -24,10 +24,8 @@ y0 = 750 #visina sa koje pada kap
 
 for i, v0 in enumerate(V0):
     #bez otpora - dok se ne postigne brzina malo veca od terminalne
-    vyb = [v0]
-    yb = [y0]
+    vyb = [v0]; yb = [y0]
     tb = [0]
-
     #O.K. metodom racunamo brzinu i polozaj dok ne postane malo veca od terminalne
     while -vyb[-1] < 1.1*vt:
         ayb = -g
@@ -37,11 +35,12 @@ for i, v0 in enumerate(V0):
 
         tb.append(tb[-1] + dt)
 
+
+
     #sa otporom - do dodira kapi kise sa Zemljom
     ayo = [-g - kv/m*v0]; vyo = [v0]
     yo = [y0]; to = [0]
     tvt = 0; vvt = vyo[-1]; nadjen = False
-    
     #O.K. metodom racunamo brzinu i polozaj kada imamo silu otpora
     while yo[-1] > 0:
         ayo.append(-g - kv/m*vyo[-1])
